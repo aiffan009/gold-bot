@@ -6,7 +6,8 @@ from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 from flask import Flask
 
-TOKEN = "ใส่_TOKEN_ของคุณ"
+import os
+TOKEN = os.environ.get("TOKEN")
 TH_TZ = timezone(timedelta(hours=7))
 
 # ---------- ดึงราคาทอง (ฟรี) ----------
